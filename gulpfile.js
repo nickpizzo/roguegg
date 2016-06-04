@@ -9,6 +9,7 @@ var prefix = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
+var ghPages = require('gh-pages');
 
 ///////////////////////////
 // HTML CSS & SCRIPTS TASKS
@@ -22,6 +23,7 @@ gulp.task('html', () => {
     .pipe(sync.reload({
       stream: true
     }));
+    gulp.src('src/CNAME').pipe(gulp.dest('dist'));
 });
 
 gulp.task('scripts', () => {
@@ -69,6 +71,10 @@ gulp.task('serve', ['build'], function () {
   gulp.watch('src/*.js', ['scripts']);
   gulp.watch('src/*.{css,scss,sass}', ['styles']);
   gulp.watch('src/img/*.{svg, png, jpg}', ['images']);
+});
+
+gulp.task('deploy', ['build'], function () {
+  ghPages.publish('dist');
 });
 
 //////////////////////////////
