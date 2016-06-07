@@ -52,7 +52,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding-bottom: 30px;
+	// padding-bottom: 30px;
 }
 
 .square {
@@ -64,6 +64,10 @@ body {
 	align-items: center;
 	box-shadow: -2px 3px 0px 0px rgba(0,235,255,1);
 	margin: 5px;
+}
+
+.row1 {
+	display: flex;
 }
 
 .row1 > a {
@@ -103,6 +107,7 @@ body {
 .subscribeBox {
 	display: flex;
 	justify-content: center;
+	padding-top: 5rem;
 }
 
 input[type=email] {
@@ -166,15 +171,15 @@ input[type=submit] {
 }
 
 @media (min-width: 920px) {
-	.row1 {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.row2 {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+	// .row1 {
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
+	//
+	// .row2 {
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
 }
