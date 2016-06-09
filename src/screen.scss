@@ -151,10 +151,9 @@ input[type=submit] {
 
 @media (max-width: 580px) {
 	.logo {
-		width: 242px; // 48.4666%
-		height: 258px; // 51.5333%
+		// width: 294px; // 48.4666%
+		// height: 306px; // 51.5333%
 		padding-bottom: 10;
-
 	}
 
 	input[type=email] {
@@ -167,6 +166,14 @@ input[type=submit] {
 		margin: 0 auto;
 		margin-top: 10px;
 		border-radius: 25px;
+	}
+
+	body {
+		background: none;
+	}
+
+	.container {
+		max-width: 100%;
 	}
 }
 
