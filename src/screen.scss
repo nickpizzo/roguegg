@@ -141,7 +141,7 @@ input[type=submit] {
 
 // responsive
 
-@media (max-width: 920px) {
+@media screen and (max-width: 920px) {
 	.logo {
 		width: 364px; // 48.4666%
 		height: 386px; // 51.5333%
@@ -149,7 +149,7 @@ input[type=submit] {
 	}
 }
 
-@media (max-width: 580px) {
+@media screen and (max-width: 580px) {
 	.logo {
 		// width: 294px; // 48.4666%
 		// height: 306px; // 51.5333%
@@ -177,7 +177,7 @@ input[type=submit] {
 	}
 }
 
-@media (min-width: 920px) {
+@media screen and (min-width: 920px) {
 	// .row1 {
 	// 	display: flex;
 	// 	justify-content: center;
