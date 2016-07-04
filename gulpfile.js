@@ -24,6 +24,7 @@ gulp.task('html', () => {
       stream: true
     }));
     gulp.src('src/CNAME').pipe(gulp.dest('dist'));
+    gulp.src('src/google-site-verification.html').pipe(gulp.dest('dist'));
 });
 
 gulp.task('scripts', () => {
