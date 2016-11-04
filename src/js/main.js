@@ -1,4 +1,11 @@
-console.log('test');
+$(document).ready(function(){
+  $('.slider').slick({
+    autoplay: true,
+    dots: true,
+    arrows: true,
+    speed: 500
+  });
+});
 
 var modal = document.getElementById('myModal');
 

@@ -1,24 +1,26 @@
 @import 'normalize';
+@import 'slick';
+@import 'slick-theme';
+
 $rogue-blue: #2D97D3;
 $rogue-orange: #FDB713;
 
 body {
-	background:
-	radial-gradient(black 15%, transparent 16%) 0 0,
-	radial-gradient(black 15%, transparent 16%) 8px 8px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-	background-color:#282828;
-	background-size:16px 16px;
+	background: url("img/bg.png");
+
+	// background:
+	// radial-gradient(black 15%, transparent 16%) 0 0,
+	// radial-gradient(black 15%, transparent 16%) 8px 8px,
+	// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	// background-color:#282828;
+	// background-size:16px 16px;
 }
 
 .container {
-	background-color: #060607;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	background-color: #1A1A1A;
 	max-width: 70%;
-	min-height: 100vh;
+	min-height: 100%;
 	margin: 0 auto;
 	position:relative;
   box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -36,37 +38,48 @@ body {
   border-radius:100px / 10px;
 }
 
-// logo
+header {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px white;
+	padding: 15px;
+}
 
-.logoBox img {
-	width: 100%;
-  height: auto;
-	padding-bottom: 10px;
-	padding-top: 15px;
+// logo
+.logo {
+	width: 134px;
+	height: 165px;
+
 }
 
 //social icons
-
 .iconsBox {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	align-items: center;
+	padding-right: 5px;
 	// padding-bottom: 30px;
 }
 
 .square {
-	width: 100px;
-	height: 75px;
-	background: #1C242D;
+	width: 90px;
+	height: 65px;
+	background: #3F4041;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	box-shadow: -2px 3px 0px 0px $rogue-blue;
-	margin: 5px;
+	margin: 7px;
+	border-radius: 5px;
+	transform: skewX(-20deg);
 }
 
 .row1 {
 	display: flex;
+
+	a div i {
+		transform: skewX(20deg);
+	}
 }
 
 .row1 > a {
@@ -102,9 +115,11 @@ body {
 }
 
 //subscribe form
-
 .subscribeBox {
-	padding-top: 10%
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 80px;
 }
 
 input[type=email] {
@@ -115,6 +130,12 @@ input[type=email] {
     padding-left:10px;
     width: 245px;
 		border-radius: 25px 0px 0px 25px;
+}
+
+.slider {
+	height: 500px;
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
 
 input[type=submit] {
@@ -137,10 +158,7 @@ input[type=submit] {
 }
 
 // responsive
-
-@media screen and (max-width: 580px) {
-
-
+@media screen and (max-width: 710px) {
 	.logoBox img {
 		width: 90% auto;
 	  height: auto;
@@ -213,18 +231,4 @@ input[type=submit] {
   color: $rogue-orange;
   text-decoration: none;
   cursor: pointer;
-}
-
-@media screen and (min-width: 920px) {
-	// .row1 {
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	align-items: center;
-	// }
-	//
-	// .row2 {
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	align-items: center;
-	// }
 }
